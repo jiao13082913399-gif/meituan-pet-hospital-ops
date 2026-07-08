@@ -1,0 +1,14 @@
+name: 美团宠物医院运营问答
+version: 1.0.0
+description: 面向宠物医院的美团/大众点评运营问答、执行方案和经营看板生成 Skill。
+skill: ./SKILL.md
+entrypoint: SKILL.md
+language: zh-CN
+tags:
+  - pet-hospital
+  - meituan
+  - dianping
+  - local-life
+  - operations
+  - dashboard
+
