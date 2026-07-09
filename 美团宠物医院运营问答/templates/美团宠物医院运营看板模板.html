@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>美团宠物医院运营看板模板</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(135deg, #ffedd5 0%, #fff7ed 45%, #ffffff 100%);
+      color: #1f2937;
+    }
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      background: rgba(255,255,255,.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid #fed7aa;
+    }
+    .brand { font-weight: 800; color: #ea580c; }
+    .tabs { display: flex; gap: 8px; }
+    .tab {
+      padding: 10px 14px;
+      border-radius: 12px;
+      color: #64748b;
+      font-size: 14px;
+      font-weight: 650;
+    }
+    .tab.active { color: #f97316; background: #ffedd5; }
+    main { max-width: 1180px; margin: 0 auto; padding: 28px 20px 48px; }
+    .hero {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+    h1 { margin: 0 0 8px; font-size: 30px; line-height: 1.15; }
+    .muted { color: #64748b; font-size: 14px; }
+    .platforms { display: flex; gap: 8px; padding: 6px; border-radius: 16px; background: rgba(255,255,255,.7); border: 1px solid #fed7aa; }
+    .platform { padding: 10px 16px; border-radius: 12px; color: #64748b; font-weight: 700; }
+    .platform.active { color: #fff; background: linear-gradient(135deg, #f97316, #fb923c); }
+    .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin: 22px 0; }
+    .card {
+      background: rgba(255,255,255,.88);
+      border: 1px solid #fed7aa;
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 10px 24px rgba(249,115,22,.10);
+    }
+    .label { color: #64748b; font-size: 12px; font-weight: 700; }
+    .value { margin-top: 10px; font-size: 26px; font-weight: 850; color: #0f172a; }
+    .trend { margin-top: 8px; color: #059669; font-size: 12px; font-weight: 700; }
+    .grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 16px; }
+    .section-title { margin: 0 0 14px; font-size: 18px; }
+    .bars { display: grid; gap: 14px; }
+    .bar-row { display: grid; grid-template-columns: 90px 1fr 70px; gap: 12px; align-items: center; font-size: 13px; }
+    .bar-track { height: 12px; border-radius: 999px; background: #ffedd5; overflow: hidden; }
+    .bar { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #f97316, #fb923c); }
+    .issues { display: grid; gap: 10px; }
+    .issue { padding: 12px; border-radius: 14px; background: #f8fafc; border: 1px solid #e2e8f0; font-size: 13px; line-height: 1.5; }
+    .plan { margin-top: 16px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; overflow: hidden; border-radius: 14px; }
+    th, td { padding: 12px; border-bottom: 1px solid #e5e7eb; text-align: left; vertical-align: top; }
+    th { background: #fff7ed; color: #ea580c; }
+    @media (max-width: 900px) {
+      .kpis { grid-template-columns: repeat(2, 1fr); }
+      .grid { grid-template-columns: 1fr; }
+      .nav { height: auto; align-items: flex-start; flex-direction: column; gap: 10px; padding: 14px; }
+      .tabs { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">门店运营分析 · Store Analytics</div>
+    <div class="tabs">
+      <div class="tab">数据导入</div>
+      <div class="tab active">数据看板</div>
+      <div class="tab">单店分析</div>
+      <div class="tab">周期对比</div>
+      <div class="tab">导出报告</div>
+    </div>
+  </nav>
+  <main>
+    <section class="hero">
+      <div>
+        <h1>美团宠物医院运营看板</h1>
+        <div class="muted">周期：2026-07 · 门店：示例宠物医院 · 负责人：运营/店长</div>
+      </div>
+      <div class="platforms">
+        <div class="platform active">美团</div>
+        <div class="platform">抖音</div>
+        <div class="platform">高德</div>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <div class="card"><div class="label">经营评分</div><div class="value">86</div><div class="trend">目标 90+</div></div>
+      <div class="card"><div class="label">曝光</div><div class="value">12,800</div><div class="trend">较上期 +9%</div></div>
+      <div class="card"><div class="label">访问</div><div class="value">1,920</div><div class="trend">访问率 15%</div></div>
+      <div class="card"><div class="label">下单量</div><div class="value">86</div><div class="trend">团单 4 个</div></div>
+      <div class="card"><div class="label">核销率</div><div class="value">72%</div><div class="trend">目标 80%</div></div>
+      <div class="card"><div class="label">推广通 ROI</div><div class="value">2.3</div><div class="trend">健康</div></div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2 class="section-title">客流漏斗趋势</h2>
+        <div class="bars">
+          <div class="bar-row"><span>曝光</span><div class="bar-track"><div class="bar" style="width:90%"></div></div><strong>12,800</strong></div>
+          <div class="bar-row"><span>访问</span><div class="bar-track"><div class="bar" style="width:58%"></div></div><strong>1,920</strong></div>
+          <div class="bar-row"><span>下单</span><div class="bar-track"><div class="bar" style="width:36%"></div></div><strong>86</strong></div>
+          <div class="bar-row"><span>核销</span><div class="bar-track"><div class="bar" style="width:28%"></div></div><strong>62</strong></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">问题诊断</h2>
+        <div class="issues">
+          <div class="issue">访问转化偏低：入口图和团单首图需要突出新客体检、疫苗和绝育评估。</div>
+          <div class="issue">核销率未达目标：前台建立未核销名单，24 小时内确认预约。</div>
+          <div class="issue">经营评分差 4 分：优先补齐相册、在线咨询回复和差评处理。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card plan">
+      <h2 class="section-title">一页纸执行方案</h2>
+      <table>
+        <thead>
+          <tr><th>问题</th><th>执行的具体方案</th><th>预期目标</th><th>迭代截止日期</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>访问到下单转化不足</td>
+            <td>运营重做入口图和 2 个核心团单详情；前台补快捷回复；店长每天检查未核销名单。</td>
+            <td>14 天内访问转化率提升 20%；核销率提升至 80%；经营评分达到 90。</td>
+            <td>2026-07-16 完成第一轮；2026-07-23 复盘。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
